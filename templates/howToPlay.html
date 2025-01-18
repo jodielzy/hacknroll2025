@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <style>
+        #how-to-play-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .rule-section {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="how-to-play-container">
+        <h1>How to Play</h1>
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="padding: 20px; border: 1px solid #ddd;">
+                    <div class="rule-section">
+                        <h2>Tutorial</h2>
+                        <p>
+                            This is a training game that teaches you the basic shortcuts.
+                            Follow along the instructions shown on your screen and try pressing the shortcuts as instructed.
+                            If you get stuck, you can press the "Hint" button to get guidance on what shortcut to use.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 20px; border: 1px solid #ddd;">
+                    <div class="rule-section">
+                        <h2>Race</h2>
+                        <p>
+                            Compete with your friends to see who is faster at mastering Windows shortcuts!
+                            Join a room by entering a name for yourself and a room name. Once both players are ready, 
+                            the game will start. Each player must press the correct shortcut for the task shown on the screen.
+                            The winner is the one who completes all tasks the fastest!
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <button onclick="navigateTo('index.html')">Return to Main Menu</button>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

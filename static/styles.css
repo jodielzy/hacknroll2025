@@ -1,0 +1,541 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    background: url('../static/images/wallpaper.png');
+    background-size: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .desktop {
+    display: grid;
+    grid-template-columns: 0fr 0fr;
+    gap: 10px;
+    padding: 20px;
+    position: relative;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  .folder1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    cursor: pointer;
+  }
+  
+  .folder1 img {
+    width: 100px;
+    height: 64px;
+  }
+  
+  .folder1 span {
+    margin-top: 8px;
+    font-size: 15px;
+    text-align: center;
+    color: #000000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    transform: translateX(-5px);
+    font-family: 'Fredoka', cursive;
+  }
+
+  .folder2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    cursor: pointer;
+    transform: translateX(-10px);
+    transform: translateY(-5px);
+  }
+
+  .folder2 img {
+    width: 83px;
+    height: 72px;
+  }
+
+  .folder2 span {
+    margin-top: 8px;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-family: 'Fredoka', cursive;
+  }
+
+  .google {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    cursor: pointer;
+    transform: translate(-8px, -40px);
+  }
+
+  .google img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .google span {
+    margin-top: 8px;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-family: 'Fredoka', cursive;
+  }
+
+  .email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    cursor: pointer;
+    transform: translate(-1px, -35px);
+  }
+
+  .email img {
+    width: 80px;
+    height: 75px;
+  }
+
+  .email span {
+    margin-top: 8px;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-family: 'Fredoka', cursive;
+  }
+
+  .linkedin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    cursor: pointer;
+    transform: translate(-7px, -65px);
+  }
+
+  .linkedin img {
+    width: 80px;
+    height: 75px;
+  }
+
+  .linkedin span {
+    margin-top: 8px;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-family: 'Fredoka', cursive;
+  }
+  
+  .youtube {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    cursor: pointer;
+    transform: translate(-2px, -63px);
+  }
+
+  .youtube img {
+    width: 77px;
+    height: 72px;
+  }
+
+  .youtube span {
+    margin-top: 8px;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-family: 'Fredoka', cursive;
+  }
+ 
+  .whatsapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    cursor: pointer;
+    transform: translate(-7px, -93px);
+  }
+
+  .whatsapp img {
+    width: 77px;
+    height: 72px;
+  }
+
+  .whatsapp span {
+    margin-top: 8px;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-family: 'Fredoka', cursive;
+  }
+
+  .rules-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+    font-family: 'Fredoka', cursive;
+}
+
+.rules-popup h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.rules-popup p {
+  font-size: 18px;
+  margin: 15px 0;
+  color: #555;
+  line-height: 1.5;
+  font-family: 'Fredoka', cursive; /* Modern and playful font */
+}
+
+
+.rules-popup button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #81cce5, #76a6e5);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.rules-popup button:hover {
+    background: linear-gradient(90deg, #2f80ed, #56ccf2);
+    transform: translateY(-3px);
+}
+
+.rules-popup button:active {
+    transform: translateY(1px);
+}
+
+/* Fade-in animation for smooth appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+  
+  .hint {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #0078d7;
+    cursor: pointer;
+  }
+  
+  .hint:hover {
+    text-decoration: underline;
+  }
+  
+  .question {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #eef4ff;
+    border: 3px solid #a5b8dc;
+    border-radius: 15px;
+    width: 350px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+    color: #333;
+    z-index: 2000; /* Higher than embeddedApp's z-index */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+  
+  .question h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  
+  .question .hint {
+    font-size: 14px;
+    color: #6f8cd9;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .question .hint:hover {
+    text-decoration: underline;
+  }
+  
+  .question::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    width: 80%;
+    height: 15px;
+    background: #a5b8dc;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .question::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    background: #ff5f57;
+    border-radius: 50%;
+    box-shadow: 15px 0 0 #ffbd2e, 30px 0 0 #28c840;
+  }  
+
+  .embedded-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Lower than questionBox */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .embedded-frame {
+    flex: 1;
+    width: 100%;
+    border: none;
+    background: #fff;
+  }
+
+.highlight-grey {
+    position: relative;
+}
+
+.cat-image {
+  position: absolute;
+  width: 150px;
+  z-index: 1;
+  transition: none; /* No transition for immediate appearance */
+}
+
+.highlight-grey {
+  filter: none; /* Remove filter for unhighlight */
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url('../static/images/menu.png');
+  background-size: 100%;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.menu h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.menu-options button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: #fff;
+  background: #6c5b7b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.menu-options button:hover {
+  background: #355c7d;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  cursor: pointer;
+  transform: translate(-2px, -30px);
+}
+
+.tutorial-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 130px;
+  cursor: pointer;
+  transform: translate(-350px, 50px);
+}
+
+.how-to-play-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 205px;
+  height: 72px;
+  cursor: pointer;
+  transform: translate(43px, -27px);
+}
+
+.race-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 128px;
+  cursor: pointer;
+  transform: translate(380px, -145px);
+}
+
+.completion-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 2000;
+  font-family: 'Fredoka', cursive;
+}
+
+.completion-popup h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: #333;
+  font-family: 'Fredoka', cursive;
+}
+
+.completion-popup p {
+  margin: 0 0 20px;
+  font-size: 18px;
+  color: #555;
+  font-family: 'Fredoka', cursive;
+}
+
+.completion-options button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #56ccf2, #2f80ed);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Fredoka', cursive;
+}
+
+.completion-options button:hover {
+  background: linear-gradient(90deg, #2f80ed, #56ccf2);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+#game-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#text-to-type {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+#progress {
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+#leaderboard {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#leaderboard-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+  

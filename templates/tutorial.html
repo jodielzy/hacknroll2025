@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shortcut Key Trainer</title>
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+  <div class="desktop">
+    <div class="folder1" onclick="openWindow('Documents')">
+      <img src="../static/images/folder1.png" alt="Folder Icon">
+      <span>Documents</span>
+    </div>
+    <div class="folder2" onclick="openWindow('Downloads')">
+      <img src="../static/images/folder2.png" alt="Folder Icon">
+      <span>Downloads</span>
+    </div>
+    <div class="google" onclick="openWindow('Google')">
+      <img src="../static/images/google.png" alt="Folder Icon">
+      <span>Google</span>
+    </div>
+    <div class="email" onclick="openWindow('Email')">
+      <img src="../static/images/email.png" alt="Folder Icon">
+      <span>Email</span>
+    </div>
+    <div class="linkedin" onclick="openWindow('LinkedIn')">
+      <img src="../static/images/linkedin.png" alt="Folder Icon">
+      <span>LinkedIn</span>
+    </div>
+    <div class="youtube" onclick="openWindow('YouTube')">
+      <img src="../static/images/youtube.png" alt="Folder Icon">
+      <span>YouTube</span>
+    </div>
+    <div class="whatsapp" onclick="openWindow('WhatsApp')">
+      <img src="../static/images/whatsapp.png" alt="Folder Icon">
+      <span>WhatsApp</span>
+    </div>
+  </div>
+
+  <div class="rules-popup" id="rulesPopup">
+    <h2>Welcome to ShortcAt!</h2>
+    <p>This game trains you to use windows shortcut keys.</p>
+    <p>Type the shortcuts of the instruction shown on the screen.</p>
+    <p>If you're stuck, click on the hint to reveal the answer.</p>
+    <p>Good luck!</p>
+    <button onclick="closeRulesPopup()">Start Game</button>
+  </div>
+
+  <div class="question" id="questionBox" style="display: none;">
+    Open a File.
+    <div class="hint" onclick="showHint()">Need a hint?</div>
+  </div>
+  <div class="embedded-popup" id="embeddedPopup" style="display: none;">
+    <iframe
+      src="embeddedApp.html"
+      id="embeddedAppFrame"
+      class="embedded-frame"
+      title="Embedded Word Document">
+    </iframe>
+  </div>
+
+  <div id="completionPopup" class="completion-popup" style="display: none;">
+    <h2>Congratulations!</h2>
+    <p>You have completed the game.</p>
+    <div class="completion-options">
+      <button onclick="playAgain()">Play Again</button>
+      <button onclick="returnToMenu()">Return to Main Menu</button>
+    </div>
+  </div>
+  
+  <script src="../js/script.js"></script>
+</body>
+</html>

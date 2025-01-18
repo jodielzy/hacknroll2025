@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shortcut Key Trainer - Menu</title>
+  <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+  <div class="menu">
+    <h1>Welcome to ShortcAt Trainer</h1>
+    <div class="logo">
+      <img src="../static/images/logo.png" alt="Folder Icon">
+    </div>
+    <div class="menu-options">
+      <img src="../static/images/tutorial-icon.png" alt="Tutorial" class="tutorial-button" onclick="navigateTo('tutorial.html')" style="cursor: pointer;">
+      <img src="../static/images/how-to-play-icon.png" alt="How to Play" class="how-to-play-button" onclick="navigateTo('howToPlay.html')" style="cursor: pointer;">
+      <img src="../static/images/race-icon.png" alt="Race" class="race-button" onclick="navigateTo('race.html')" style="cursor: pointer;">
+    </div>
+  </div>
+  <script>
+    function navigateTo(page) {
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>

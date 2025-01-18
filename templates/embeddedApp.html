@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embedded Word Document</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      height: 100%;
+    }
+
+    .toolbar {
+      width: 100%;
+      height: auto;
+      background: #fff;
+    }
+
+    .toolbar img {
+      width: 100%;
+    }
+
+    .document {
+      background: white;
+      width: 70%;
+      height: 70vh;
+      margin: 20px auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .cat-image {
+      width: 150px;
+      position: absolute;
+      top: 75%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      transition: filter 0.3s ease;
+    }
+
+    .highlight-grey {
+      filter: grayscale(20%) brightness(0.7);
+    }
+
+    .cursor {
+      width: 5px;
+      height: 50px;
+      background: black;
+      position: absolute;
+      z-index: 2;
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <img src="../static/images/tools.png" alt="Toolbar">
+  </div>
+  <div class="document">
+    <img src="../static/images/cat.png" alt="Cat" class="cat-image" id="catImage" style="left: 20%;">
+    <div class="cursor" id="cursor" style="top: 75%; left: calc(20% + 75px);"></div>
+  </div>
+  <script>
+    let backupCatHTML = ""; // Backup for the cat images
+  
+    window.addEventListener("message", function (event) {
+      if (event.data.action === "highlightAllCats") {
+        highlightAllCats();
+      } else if (event.data.action === "addCatAndUnhighlightFirst") {
+        addCatAndUnhighlightFirst();
+      } else if (event.data.action === "removeAllCats") {
+        removeAllCats();
+      } else if (event.data.action === "restoreCats") {
+        restoreCats();
+      }
+    });
+  
+    function highlightAllCats() {
+      const catImages = document.querySelectorAll(".cat-image");
+      catImages.forEach(cat => cat.classList.add("highlight-grey"));
+    }
+  
+    function addCatAndUnhighlightFirst() {
+      const documentContainer = document.querySelector(".document");
+  
+      // Unhighlight the first cat
+      const firstCat = document.getElementById("catImage");
+      if (firstCat) {
+        firstCat.classList.remove("highlight-grey");
+      }
+  
+      // Insert a new cat image
+      const newCat = document.createElement("img");
+      newCat.src = "../static/images/cat.png";
+      newCat.alt = "Cat";
+      newCat.className = "cat-image";
+      newCat.style.position = "absolute";
+      newCat.style.width = "150px";
+      newCat.style.left = "calc(20% + 150px)";
+      newCat.style.top = "75%";
+      newCat.style.transform = "translate(-50%, -50%)";
+      newCat.style.zIndex = "1";
+  
+      documentContainer.appendChild(newCat);
+  
+      const cursor = document.getElementById("cursor");
+      cursor.style.left = "calc(20% + 225px)";
+    }
+  
+    function removeAllCats() {
+      const documentContainer = document.querySelector(".document");
+      const catImages = document.querySelectorAll(".cat-image");
+  
+      // Backup the cat images for undo functionality
+      backupCatHTML = Array.from(catImages).map(cat => cat.outerHTML).join("");
+  
+      // Remove all cat images
+      catImages.forEach(cat => cat.remove());
+  
+      // Reset cursor position
+      const cursor = document.getElementById("cursor");
+      cursor.style.left = "30px";
+    }
+  
+    function restoreCats() {
+      const documentContainer = document.querySelector(".document");
+  
+      // Restore the backup cat images
+      documentContainer.insertAdjacentHTML("beforeend", backupCatHTML);
+  
+      // Clear the backup to prevent duplicate restores
+      backupCatHTML = "";
+      
+      const cursor = document.getElementById("cursor");
+      cursor.style.left = "calc(20% + 225px)";
+    }
+  </script>  
+</body>
+</html>
