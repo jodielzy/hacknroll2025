@@ -31,7 +31,7 @@ cliapp==1.0.9
 click==8.1.7
 click-plugins==1.1.1
 cligj==0.7.2
-cmdtest==0.32+git
+cmdtest==0.1.1
 colorama==0.4.6
 colored-traceback==0.3.0
 command-not-found==0.3
