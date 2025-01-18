@@ -34,7 +34,6 @@ cligj==0.7.2
 cmdtest==0.1.1
 colorama==0.4.6
 colored-traceback==0.3.0
-command-not-found==0.3
 crayons==0.4.0
 cryptography==42.0.7
 cycler==0.11.0
