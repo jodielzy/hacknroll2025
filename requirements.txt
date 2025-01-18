@@ -129,5 +129,5 @@ scikit-learn==1.5.2
 scipy
 simple-websocket==1.1.0
 six==1.16.0
-tensorflow==2.9.0 
+tensorflow
 Werkzeug==3.0.3
