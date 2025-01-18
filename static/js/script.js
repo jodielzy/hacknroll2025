@@ -126,7 +126,7 @@ function showHint() {
 
 //race script
 
-const socket = io('http://127.0.0.1:5000'); // Use the backend's URL
+const socket = io('https://hacknroll2025-5xq6.onrender.com'); // Use the backend's URL
 
 const textToType = document.getElementById('text-to-type');
 const playerProgress = document.getElementById('player-progress');
