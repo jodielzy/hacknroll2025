@@ -1,7 +1,7 @@
 Flask
 Flask-SocketIO
 eventlet
-random
+Random
 os
 absl-py==2.1.0
 aioquic==1.0.0
