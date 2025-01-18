@@ -4,21 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multiplayer Typeracer</title>
-    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-<body>
+<body class="race">
     <div id="game-container">
-        <h1>Typeracer Multiplayer</h1>
-        <input type="text" id="player-name" placeholder="Enter your name" required>
-        <input type="text" id="room-name" placeholder="Enter room name" required>
-        <button id="start-game">Join Room</button>
+        <h1>ShortcAt Multiplayer</h1>
+        <div class="input-container">
+            <input type="text" id="player-name" placeholder="Name" required>
+            <input type="text" id="room-name" placeholder="Room Number" required>
+        </div>
+            <button id="start-game">Join Room</button>
         <div id="text-to-type">Loading...</div>
         <div id="progress">
-            <div id="player-progress">Your Progress: 0/0</div>
-            <div id="opponent-progress">Opponent's Progress: 0/0</div>
-        </div>
+            <div id="player-progress-container">
+                <label>Your Progress:</label>
+                <div class="progress-bar">
+                    <div id="player-progress-bar" class="progress"></div>
+                </div>
+            </div>
+            <div id="opponent-progress-container">
+                <label>Opponent's Progress:</label>
+                <div class="progress-bar">
+                    <div id="opponent-progress-bar" class="progress"></div>
+                </div>
+            </div>
+        </div> 
+        <button class="return" onclick="navigateTo('{{ url_for('index') }}')">Return to Main Menu</button>
     </div>
+    <script>
+        function navigateTo(url) {
+          window.location.href = url;
+        }
+      </script>
     <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

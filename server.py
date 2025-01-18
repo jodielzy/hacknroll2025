@@ -1,11 +1,31 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_socketio import SocketIO, emit, join_room, leave_room
-import random
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static", template_folder="templates")
 app.config['SECRET_KEY'] = 'your_secret_key'
 socketio = SocketIO(app, cors_allowed_origins="*")
+
+# Routes for HTML pages
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/tutorial')
+def tutorial():
+    return render_template('tutorial.html')
+
+@app.route('/how-to-play')
+def how_to_play():
+    return render_template('howToPlay.html')
+
+@app.route('/race')
+def race():
+    return render_template('race.html')
+
+@app.route('/embedded-app')
+def embedded_app():
+    return render_template('embeddedApp.html')
 
 # Shortcut descriptions and corresponding keybinds
 shortcuts = [
@@ -116,4 +136,4 @@ def handle_leave(data):
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # Use PORT from environment or default to 5000
-    socketio.run(app, host='0.0.0.0', port=port)
+    socketio.run(app, host='0.0.0.0', port=port, debug=True)

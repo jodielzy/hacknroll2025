@@ -490,12 +490,22 @@ body {
 
 #game-container {
   max-width: 600px;
+  width: 600px;
+  height: 350px;
+  margin: 50px auto;
   margin: 50px auto;
   padding: 20px;
+  padding: 10px 20px;
+  background: url('./images/cat2.png');
   background: white;
+  background-size: 150%;
+  border-radius: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(160px);
 }
+
 
 #text-to-type {
   font-size: 1.2em;
@@ -535,6 +545,81 @@ button:disabled {
 #leaderboard-list {
   list-style-type: none;
   padding: 0;
+}
+
+.race {
+  margin: 0;
+    background: url('./images/racer_background.png');
+    background-size: 100%;
+    font-family: 'Fredoka', cursive;
+}
+  
+.progress-bar {
+  width: 80%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 5px auto;
+  height: 20px;
+}
+.progress {
+  height: 100%;
+  background-color: #95b8dd;
+  width: 0; /* Initially 0% */
+  transition: width 0.3s ease;
+}
+.win {
+  font-family: 'Fredoka', cursive;
+  font-size: 24px;
+  transform: translateY(310px);
+}
+.loss {
+  font-family: 'Fredoka', cursive;
+  font-size: 24px;
+  transform: translateY(310px);
+}
+.input-container {
+  display: flex;
+  flex-direction: row; /* Stack inputs vertically */
+  align-items: center; /* Center align inputs */
+  width: 250px; /* Full-width container */
+  margin: 20px auto; /* Center the container on the page */
+  gap: 20px;
+  transform: translateX(-105px);
+}
+input[type="text"] {
+  width: 200px; /* Make it responsive */
+  height: 15px;
+  padding: 10px;
+  font-size: 16px;
+}
+#start-game {
+  background-color: #b7d6f2; /* Green background */
+  color: black; /* White text */
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transform: translateY(-6px);
+}
+#start-game:hover {
+  background-color: #91b8e4; /* Darker green */
+}
+.return {
+  background-color: #b7d6f2; /* Green background */
+  color: black; /* White text */
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transform: translateY(85px);
+}
+.return:hover {
+  background-color: #91b8e4; /* Darker green */
 }
 
 

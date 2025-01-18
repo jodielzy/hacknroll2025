@@ -10,7 +10,9 @@
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: white;
+            background: url('../static/images/rules_background.png');
+            background-size: 110%;
+            background-position: center;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             font-family: Arial, sans-serif;
@@ -18,7 +20,8 @@
 
         h1 {
             text-align: center;
-            color: #333;
+            color: #4274ad;
+            font-weight: bold;
         }
 
         .rule-section {
@@ -26,22 +29,24 @@
         }
 
         h2 {
-            color: #007BFF;
+            color: #4274ad;
             margin-bottom: 10px;
+            font-weight: bold;
         }
 
         p {
             color: #555;
             line-height: 1.6;
             margin: 10px 0;
+            font-weight: bold;
         }
 
         button {
             display: block;
             margin: 20px auto;
             padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
+            background-color: #b7d6f2;
+            color: black;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -49,7 +54,12 @@
         }
 
         button:hover {
-            background-color: #0056b3;
+            background-color: #91b8e4;
+        }
+
+        body {
+            background: url('../static/images/htp_background.png');
+            background-size: cover;
         }
     </style>
 </head>
@@ -88,7 +98,7 @@
 
     <script>
         function navigateTo(page) {
-            window.location.href = page;
+            window.location.href = '/';
         }
     </script>
 </body>
