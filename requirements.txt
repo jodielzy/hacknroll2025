@@ -52,7 +52,7 @@ folium==0.16.0
 fonttools==4.29.1
 fs==2.4.12
 future==1.0.0
-gast==0.6.0
+gast==0.4.0  
 geographiclib==2.0
 geopandas==0.14.4
 geopy==2.4.1
@@ -128,6 +128,6 @@ pytz==2022.1
 scikit-learn==1.5.2
 scipy
 simple-websocket==1.1.0
-six==1.16.0
-tensorflow==2.17.0
+six==1.16.0a
+tensorflow==2.9.0 
 Werkzeug==3.0.3
