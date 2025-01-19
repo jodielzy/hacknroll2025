@@ -15,11 +15,11 @@ By catering to beginners, this application aims to make learning shortcuts an en
 The target audience for this shortcut application includes elderly users and young children. The application is designed primarily for Windows and Google Chrome systems, as these are widely popular platforms.
 
 ## Features
-•  Tutorial Mode provides a visually engaging interface designed to simplify the learning process with clear, step-by-step directives. It has vibrant visuals which emulate real-world actions performed by the shortcuts.  Hints and tips are available along the way to aid unfamiliar users, ensuring accessibility for all skill levels.
+Tutorial Mode provides a visually engaging interface designed to simplify the learning process with clear, step-by-step directives. It has vibrant visuals which emulate real-world actions performed by the shortcuts.  Hints and tips are available along the way to aid unfamiliar users, ensuring accessibility for all skill levels.
 
-•  How to Play acts as a quick-start guide, helping users understand the app's different features and modes. This section breaks down the gameplay mechanics, explaining how to interact with the app effectively. Whether it’s navigating through Tutorial Mode or competing in a 1v1 challenge, the instructions are designed to be clear, accessible, and visually pleasing. 
+How to Play acts as a quick-start guide, helping users understand the app's different features and modes. This section breaks down the gameplay mechanics, explaining how to interact with the app effectively. Whether it’s navigating through Tutorial Mode or competing in a 1v1 challenge, the instructions are designed to be clear, accessible, and visually pleasing. 
 
-•  Race is a 1v1 Mode that offers a vibrant and competitive environment to test their shortcut knowledge. It is enhanced by real-time visual feedback, dynamic progress bars, and captivating graphics. Each player is tasked with completing shortcut-based directives under timed conditions, testing their speed and accuracy. Whether competing with friends, family, or colleagues, the 1v1 Mode turns shortcut learning into an exciting and interactive experience.
+Race is a 1v1 Mode that offers a vibrant and competitive environment to test their shortcut knowledge. It is enhanced by real-time visual feedback, dynamic progress bars, and captivating graphics. Each player is tasked with completing shortcut-based directives under timed conditions, testing their speed and accuracy. Whether competing with friends, family, or colleagues, the 1v1 Mode turns shortcut learning into an exciting and interactive experience.
 
 ## What's next for ShortcAt
 MacOS compatibility: We aim to adapt existing features to support MacOS shortcuts and ensure a seamless user experience across Apple devices.
